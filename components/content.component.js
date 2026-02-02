@@ -13,7 +13,7 @@ export class ContentComponent extends HTML {
   }
 
   getWebSocket() {
-    return PublicBitgetWebSocket({
+    return new PublicBitgetWebSocket({
       onopen: (data) => this.onSocketOpen(data),
       onmessage: (data) => this.onSocketMessage(data),
       onerror: (data) => this.onSocketError(data),
